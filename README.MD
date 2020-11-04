@@ -26,7 +26,7 @@ Strategy é utilizado quando você precisa que um algoritmo mude em tempo real, 
 
 # Estrutura
 
-![](/resources/Diagram.jpg)
+![](/resources/Strategy.jpg)
 
 ### Strategy
 
@@ -48,7 +48,7 @@ Entretanto, esses algoritmos diferem na forma de sua implementação, fato este 
 
 Tendo em vista este aspecto, podemos utilizar a Strategy para definir qual algoritmo deve ser utilizado no momento adequado de uma forma mais organizada.
 
-![](/resources/Strategy.jpg)
+![](/resources/Diagram.jpg)
 
 Para utilizar a Strategy neste caso, devemos criar uma interface chamada SortingStrategy que deve ser implementada por todas as classes de ordenação (Selection, Insertion, Bubble, Merge e Quick).
 
@@ -64,29 +64,29 @@ Com isso, ao invés de instanciar um objeto para cada classe de ordenação, pod
 ### Sem utilizar Strategy:
 
 ```
-	int[] list1 = {12,25,64,22,11};
+int[] list1 = {12,25,64,22,11};
 	
-    QuickSort q = new QuickSort();
-	q.sort(list);
+QuickSort q = new QuickSort();
+q.sort(list);
 
-    int[] list2 = {1, 2, 3, 4, 8, 7, 6, 4 ,9, 10, 11, 12 ,13 ,14 ,15, 16 ,17, 18, 19, 20};
+int[] list2 = {1, 2, 3, 4, 8, 7, 6, 4 ,9, 10, 11, 12 ,13 ,14 ,15, 16 ,17, 18, 19, 20};
     
-    SelectionSort s = new SelectionSort();
-    s.sort(list);
+SelectionSort s = new SelectionSort();
+s.sort(list);
 
 ```
 
 ### Utilizando Strategy:
 
 ```
-	int[] list1 = {12,25,64,22,11};
+int[] list1 = {12,25,64,22,11};
 	
-    SortingStrategy s = new QuickSort();
-	s.sort(list);
+SortingStrategy s = new QuickSort();
+s.sort(list);
 
-    int[] list2 = {1, 2, 3, 4, 8, 7, 6, 4 ,9, 10, 11, 12 ,13 ,14 ,15, 16 ,17, 18, 19, 20};
+int[] list2 = {1, 2, 3, 4, 8, 7, 6, 4 ,9, 10, 11, 12 ,13 ,14 ,15, 16 ,17, 18, 19, 20};
     
-    s = new SelectionSort();
-    s.sort(list);
+s = new SelectionSort();
+s.sort(list);
 
 ```
