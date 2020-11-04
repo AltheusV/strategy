@@ -2,7 +2,7 @@
 
 ## O que é um padrão de Projeto?
 
-Padrões de projeto simplificam a vida de um desenvolvedor ao definir uma série de soluções que foram propostas devido à problemas que ocorreram no passado, buscando um código mais limpo e que tenha fácil manutenção.
+Padrões de projeto simplificam a vida de um desenvolvedor ao definir uma série de soluções propostas devido à problemas que ocorreram no passado, buscando um código mais limpo e que tenha fácil manutenção.
 Devem ser utilizados apenas quando necessários, em situações na qual um padrão pode melhorar e simplificar a lógica do algoritmo de forma a reduzir duplicações e aumentar flexibilidade. Caso seja usado incorretamente, como em situações que não sejam necessários, é muito provável que o código se torne mais complexo.
 
 ## Strategy
@@ -22,9 +22,9 @@ Strategy é utilizado quando você precisa que um algoritmo mude em tempo real, 
 
 2. Quando se precisa ocultar do usuário estruturas de dados complexas, específicas do algoritmo.
 
-3. Quando uma classe define muitos comportamentos que estão dispostos em uma estrutura condicional.
+3. Quando uma classe define muitos comportamentos que estão dispostos em uma extensa estrutura condicional.
 
-# Estrutura
+## Estrutura
 
 ![](/resources/Strategy.jpg)
 
@@ -34,7 +34,7 @@ Strategy é utilizado quando você precisa que um algoritmo mude em tempo real, 
 
 ### ConcreteStrategy
 
-É a classe concreta que herda da Strategy abstrata, que está definida como as subclasses ConcreteStrategyA, ConcreteStrategyB e ConcreteStrategyA no diagrama da acima.
+É a classe concreta que herda da Strategy abstrata, que está definida como as subclasses ConcreteStrategyA, ConcreteStrategyB e ConcreteStrategyA no diagrama acima.
 
 ### Context
 
@@ -46,7 +46,7 @@ Na computação, existem vários tipos de algoritmos de ordenação que possuem 
 
 Entretanto, esses algoritmos diferem na forma de sua implementação, fato este que ocasiona uma maior rapidez no tempo de execução para determinados casos.
 
-Tendo em vista este aspecto, podemos utilizar a Strategy para definir qual algoritmo deve ser utilizado no momento adequado de uma forma mais organizada.
+Tendo em vista este aspecto, podemos utilizar a Strategy para definir qual algoritmo deve ser utilizado no momento adequado e de uma forma mais organizada.
 
 ![](/resources/Diagram.jpg)
 
@@ -90,3 +90,23 @@ s = new SelectionSort();
 s.sort(list);
 
 ```
+
+## Referências:
+
+[Devmedia - Strategy](https://www.devmedia.com.br/patterns-strategy/18868)
+
+[Devmedia - Strategy Aplicação](https://www.devmedia.com.br/estudo-e-aplicacao-do-padrao-de-projeto-strategy/25856)
+
+
+[Wikipedia(pt) Strategy](https://pt.wikipedia.org/wiki/Strategy)
+
+[Wikipedia(en) Strategy](https://en.wikipedia.org/wiki/Strategy_pattern)
+
+[UFU - Strategy](http://www.facom.ufu.br/~fabiano/disciplinas/poo2/Aula01-Padrao-Strategy.pdf)
+
+[Medium - Strategy](https://medium.com/mulheres-de-produto/o-que-%C3%A9-strategy-pattern-e-quando-usar-2fc3bcb4873f)
+
+[AlgaWorks - Video Prático sobre Strategy](https://www.youtube.com/watch?v=rC296hM-S4g)
+
+[GeeksforGeeks - Algoritmos de Ordenação](https://www.geeksforgeeks.org/sorting-algorithms/)
+
