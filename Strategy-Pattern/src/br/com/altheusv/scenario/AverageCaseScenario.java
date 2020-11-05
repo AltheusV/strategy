@@ -9,7 +9,6 @@ import br.com.altheusv.sorting.SelectionSort;
 public class AverageCaseScenario {
 
 	public static void main(String[] args) {
-		long startTime = System.nanoTime();
 		
 		String sortType = "Selection";
 		//String sortType = "Insertion";
@@ -44,8 +43,6 @@ public class AverageCaseScenario {
 		}
 		
 		print(list);
-		long endTime = System.nanoTime();
-		System.out.println("Execution time in nanoseconds  : " + (endTime - startTime));
 	}
 	
 	public static void print(int[] list){

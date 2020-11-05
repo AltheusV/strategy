@@ -6,9 +6,7 @@ import br.com.altheusv.sorting.SortingStrategy;
 public class StrategyFactoryContext {
 
 	public static void main(String[] args) {
-		
-		long startTime = System.nanoTime();
-		
+			
 		SortingType t = SortingType.values()[0];
 		SortingStrategy s = t.strategy();
 		
@@ -19,9 +17,6 @@ public class StrategyFactoryContext {
 		
 		s.sort(list);
 		print(list);
-		long endTime = System.nanoTime();
-		System.out.println("Execution time in nanoseconds  : " + (endTime - startTime));
-
 	}
 
 	public static void print(int[] list){

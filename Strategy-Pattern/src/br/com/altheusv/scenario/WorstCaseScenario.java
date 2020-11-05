@@ -3,7 +3,6 @@ package br.com.altheusv.scenario;
 public class WorstCaseScenario {
 
 	public static void main(String[] args) {
-		long startTime = System.nanoTime();
 		String sortType = "Selection";
 		//String sortType = "Insertion";
 		//String sortType = "Bubble";
@@ -69,8 +68,6 @@ public class WorstCaseScenario {
 		}
 		
 		print(list);
-		long endTime = System.nanoTime();
-		System.out.println("Execution time in nanoseconds  : " + (endTime - startTime));
 	}
 	
 	private static void mergeSort(int[] list, int l, int r) {
