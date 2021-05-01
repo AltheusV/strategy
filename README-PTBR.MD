@@ -1,4 +1,4 @@
-<a href="README-PTBR.md">
+<a href="README-PTBR.MD">
 <img src="https://user-images.githubusercontent.com/30200769/116628303-33085400-a925-11eb-85d7-9bbcf3b1a791.png" width="30" alt="pt-br">
 <a/>
   
