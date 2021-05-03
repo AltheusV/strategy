@@ -6,59 +6,59 @@
 <img src="https://user-images.githubusercontent.com/30200769/116637950-9b623000-a93b-11eb-9eed-06f587750c48.png" width="30" alt="eng-us">
 <a/>
 
-# Padrão de Projeto: Strategy
+# Design Pattern: Strategy
 
-## O que é um padrão de Projeto?
+## What is Design Pattern?
 
-Padrões de projeto simplificam a vida de um desenvolvedor ao definir uma série de soluções propostas devido à problemas que ocorreram no passado, buscando um código mais limpo e que tenha fácil manutenção.
-Devem ser utilizados apenas quando necessários, em situações na qual um padrão pode melhorar e simplificar a lógica do algoritmo de forma a reduzir duplicações e aumentar flexibilidade. Caso seja usado incorretamente, como em situações que não sejam necessários, é muito provável que o código se torne mais complexo.
+Design Patterns define a series of proposed solutions due to problems that occurred in the past, looking for a cleaner code that is easy to maintain.
+They should be used only when necessary, in situations where a pattern can improve and simplify the logic of the algorithm in order to reduce duplications and increase flexibility. If used incorrectly, as in situations that are not needed, it is very likely that the code will become more complex.
 
 ## Strategy
 
-Strategy é um padrão comportamental que visa encapsular famílias de algoritmos e definir uma estratégia para que sejam utilizados no momento certo.
+Strategy is a behavioral pattern that aims to encapsulate families of algorithms and define a strategy for them to be used at the right time.
 
-Definição:
->  “Defina uma família de algoritmos, encapsule cada um, e torne-os intercambiáveis. Strategy permite que o algoritmo varie independente dos clientes que o utilizam.”
+Definition:
+>  “Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy allows the algorithm to vary independently of the customers who use it.”
 
-Strategy é utilizado quando você precisa que um algoritmo mude em tempo real, em determinadas ocasiões, sem alterar as classes sobre os quais opera.
+Strategy is used when you need an algorithm to change in real time, on certain occasions, without changing the classes on which it operates.
 
-## Aplicabilidade
+## Applicability
 
-É indicado a utilização do Strategy nas seguintes situações:
+The use of the Strategy is indicated in the following situations:
 
-1. Quando muitas classes relacionadas possuem o mesmo propósito, mas diferem apenas no seu comportamento.
+1. When many classes serve the same purpose, but differ only in behavior.
 
-2. Quando se precisa ocultar do usuário estruturas de dados complexas, específicas do algoritmo.
+2. When it's necessary to hide complex data structures from the user, specific to the algorithm.
 
-3. Quando uma classe define muitos comportamentos que estão dispostos em uma extensa estrutura condicional.
+3. When a class defines many behaviors that is arranged in an extensive conditional structure.
 
-## Estrutura
+## Structure
 
 ![](/resources/Strategy.jpg)
 
 ### Strategy
 
-É uma interface comum para todas as subclasses, ou para todos os algoritmos que são suportados. 
+It is a common interface for all subclasses, or for all algorithms that are supported. 
 
 ### ConcreteStrategy
 
-É a classe concreta que herda da Strategy abstrata, que está definida como as subclasses ConcreteStrategyA, ConcreteStrategyB e ConcreteStrategyA no diagrama acima.
+It is the concrete class that inherits from the abstract Strategy, which is defined as the subclasses ConcreteStrategyA, ConcreteStrategyB and ConcreteStrategyC in the diagram above.
 
 ### Context
 
-É a classe que vai acessar um dos algoritmos das subclasses de interface Strategy.
+It's the class that will access one of the subclass algorithms of the Strategy interface.
 
-## Exemplo Prático:
+## Practical example:
 
-Na computação, existem vários tipos de algoritmos de ordenação que possuem o mesmo propósito: Ordenar. 
+In programming there are several types of sorting algorithms that serve the same purpose: To sort.
 
-Entretanto, esses algoritmos diferem na forma de sua implementação, fato este que ocasiona uma maior rapidez no tempo de execução para determinados casos.
+However, these algorithms differ in the form of their implementation, a fact that causes greater speed in the execution time for certain cases.
 
-Tendo em vista este aspecto, podemos utilizar a Strategy para definir qual algoritmo deve ser utilizado no momento adequado e de uma forma mais organizada.
+Therefore, we can use the Strategy to define which algorithm should be used at the appropriate time and in a more organized way.
 
 ![](/resources/Diagram.jpg)
 
-Para utilizar a Strategy neste caso, devemos criar uma interface chamada SortingStrategy que deve ser implementada por todas as classes de ordenação (Selection, Insertion, Bubble, Merge e Quick).
+To use Strategy in this case, we must create an interface called SortingStrategy that must be implemented by all sorting classes (Selection, Insertion, Bubble, Merge and Quick).
 
 ```
 public interface SortingStrategy {
@@ -66,10 +66,10 @@ public interface SortingStrategy {
 }
 ```
 
-Com isso, ao invés de instanciar um objeto para cada classe de ordenação, podemos instanciar um único objeto
-à partir da Strategy que pode variar em tempo real a sua "estratégia" de operação.
+Thereby, instead of instantiating an object for each class of classification, we can instantiate a single object
+from the Strategy that can vary in real time your “strategy” of operation.
 
-### Sem utilizar Strategy:
+### Without using Strategy:
 
 ```
 int[] list1 = {12,25,64,22,11};
@@ -84,7 +84,7 @@ s.sort(list);
 
 ```
 
-### Utilizando Strategy:
+### Using Strategy:
 
 ```
 int[] list1 = {12,25,64,22,11};
@@ -99,7 +99,7 @@ s.sort(list);
 
 ```
 
-## Referências:
+## Bibliographic References:
 
 [Devmedia - Strategy](https://www.devmedia.com.br/patterns-strategy/18868)
 
