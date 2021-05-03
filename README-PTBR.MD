@@ -42,7 +42,7 @@ Strategy é utilizado quando você precisa que um algoritmo mude em tempo real, 
 
 ### ConcreteStrategy
 
-É a classe concreta que herda da Strategy abstrata, que está definida como as subclasses ConcreteStrategyA, ConcreteStrategyB e ConcreteStrategyA no diagrama acima.
+É a classe concreta que herda da Strategy abstrata, que está definida como as subclasses ConcreteStrategyA, ConcreteStrategyB e ConcreteStrategyC no diagrama acima.
 
 ### Context
 
